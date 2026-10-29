@@ -16,7 +16,6 @@
                 <ul id="primary-menu" class="nav-menu">
                 <li><a href="#projects">Проекты</a></li>
                 <li><a href="#about">Обо мне</a></li>
-                <!-- <li><a href="#contact">Контакты</a></li> -->
                 </ul>
                 <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
                     <span class="icon-moon">🌙</span>
@@ -48,26 +47,6 @@
         
         <div class="projects-grid">
             
-            <!-- Проект 1: не работает домен -->
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/img/kaminkomfort_mobile.png">
-                        <img src="assets/img/kaminkomfort.jpg" alt="Главный экран сайта Kaminkomfort">
-                    </picture>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span>No Code</span>
-                        <span>UI Design</span>
-                        <span>Адаптивный дизайн</span>
-                    </div>
-                    <h3 class="project-name">Landing Page для Каминкомфорт</h3>
-                    <p class="project-desc">Одностраничный сайт для бренда каминов и отопительных систем.</p>
-                    <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('kaminkomfort');">Смотреть кейс →</a>
-                </div>
-            </div> -->
-
             <div class="project-card">
                 <div class="project-image">
                     <picture>
@@ -86,25 +65,6 @@
                     <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('stroimaster');">Смотреть кейс →</a>
                 </div>
             </div>
-
-            <!-- Проект 2 -->
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/img/stroimaster_mobile.png">
-                        <img src="assets/img/stroimaster.jpg" alt="Главный экран сайта СтройМастер">
-                    </picture>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span>HTML5 & CSS3</span>
-                        <span>Адаптивный дизайн</span>
-                    </div>
-                    <h3 class="project-name">Landing Page для СтройМастер</h3>
-                    <p class="project-desc">Лендинг для строительной компании с путём от первого экрана до заявки. ИИ-ассистент помог сократить время разработки вдвое без потери качества кода.</p>
-                    <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('stroimaster');">Смотреть кейс →</a>
-                </div>
-            </div> -->
 
             <!-- Проект 3: AXIOM -->
             <div class="project-card">
@@ -165,22 +125,45 @@
                 </div>
             </div>
 
-            <!-- Проект 3: Strapi Landing -->
-            <!-- <div class="project-card">
+            <!-- Проект 6: PLAYER-ONE -->
+            <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/img/strapi_landing_screenshot.png" alt="Проект Strapi Landing">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="assets/img/player-one_mobile.png">
+                        <img src="assets/img/player-one.jpg" alt="Главный экран портфолио PLAYER-ONE">
+                    </picture>
                 </div>
                 <div class="project-info">
                     <div class="project-tags">
-                        <span>HTML5 и CSS3</span>
-                        <span>Headless CMS</span>
-                        <span>Адаптивный Дизайн</span>
+                        <span>Портфолио</span>
+                        <span>UI Design</span>
+                        <span>Адаптивный дизайн</span>
                     </div>
-                    <h3 class="project-name">Strapi Landing</h3>
-                    <p class="project-desc">Проект по миграции маркетингового лендинга на Headless CMS: бесшовный перенос контента, гибкое управление блоками и интеграция API</p>
-                    <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('strapi');">Смотреть кейс →</a>
+                    <h3 class="project-name">Портфолио PLAYER-ONE</h3>
+                    <p class="project-desc">Портфолио дизайнера с пиксельной графикой и акцентом на проектах.</p>
+                    <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('player-one');">Смотреть кейс →</a>
                 </div>
-            </div> -->
+            </div>
+
+            <!-- Проект 7: NELUVE -->
+            <div class="project-card">
+                <div class="project-image project-image--neluve">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="assets/img/neluve_mobile.png">
+                        <img src="assets/img/neluve.jpg" alt="Главный экран магазина косметики NELUVE">
+                    </picture>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Интернет-магазин</span>
+                        <span>UI Design</span>
+                        <span>Адаптивный дизайн</span>
+                    </div>
+                    <h3 class="project-name">Интернет-магазин NELUVE</h3>
+                    <p class="project-desc">Витрина косметики с каталогом и последующим переносом на WordPress.</p>
+                    <a href="#" class="project-link" onclick="event.preventDefault(); openLivePreview('neluve');">Смотреть кейс →</a>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -217,12 +200,6 @@
 <!-- ========== Секция "Контакты" (Footer) ========== -->
 <footer id="contact" class="contact-section">
     <div class="contact-container">
-        <!-- <h2 class="contact-title">Создадим цифровой опыт вместе</h2>
-        <p class="contact-subtitle">
-            Я всегда открыт для новых проектов и интересных идей. 
-            Напишите мне, и мы всё обсудим.
-        </p> -->
-
         <div class="footer-wrapper">
             <div class="footer-bottom">
                 <p>&copy; 2026 Creative Developer. Все права защищены.</p>
@@ -233,155 +210,8 @@
             </div>
         </div>
 
-        <!-- Большая кнопка-ссылка на почту -->
-        <!-- <a href="mailto:your-email@example.com" class="contact-email">
-            your-email@example.com
-        </a> -->
-
-        <!-- Социальные сети и мессенджеры -->
-        <!-- <div class="social-links">
-            <a href="https://t.me/yourusername" target="_blank" class="social-link">Telegram</a>
-            <a href="https://github.com/yourusername" target="_blank" class="social-link">GitHub</a>
-            <a href="https://behance.net/yourusername" target="_blank" class="social-link">Behance</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">LinkedIn</a>
-        </div> -->
     </div>
 </footer>
-
-<!-- ========== LIVE PREVIEW: Kaminkomfort ========== -->
-<div id="lp-kaminkomfort" class="lp-overlay" role="dialog" aria-modal="true" aria-label="Kaminkomfort: Live Preview">
-
-    <nav class="lp-nav">
-        <button class="lp-back-btn" onclick="closeLivePreview('kaminkomfort')">
-            <span>←</span>
-            <span>Назад</span>
-        </button>
-        <span class="lp-nav-brand">Kaminkomfort</span>
-        <button class="lp-close-btn" onclick="closeLivePreview('kaminkomfort')" aria-label="Закрыть">✕</button>
-    </nav>
-
-    <div class="lp-page">
-
-        <section class="lp-hero">
-            <div class="lp-hero-content">
-                <div class="lp-tags">
-                    <span>No Code</span>
-                    <span>UI Design</span>
-                    <span>Landing Page</span>
-                </div>
-                <h2 class="lp-hero-title">Kaminkomfort<br>Landing Page</h2>
-                <p class="lp-hero-sub">Лендинг для бренда каминов и отопительных систем</p>
-                <a href="https://kaminkomfort39.ru" target="_blank" rel="noopener noreferrer" class="lp-visit-btn">Посетить сайт →</a>
-            </div>
-            <div class="lp-hero-shapes">
-                <div class="lp-shape lp-s1"></div>
-                <div class="lp-shape lp-s2"></div>
-                <div class="lp-shape lp-s3"></div>
-            </div>
-        </section>
-
-        <section class="lp-section lp-bg-alt">
-            <div class="lp-container">
-                <div class="lp-split">
-                    <div class="lp-split-main">
-                        <h2 class="lp-section-title">О проекте</h2>
-                        <p class="lp-text">Kaminkomfort продаёт и монтирует камины, отопительные системы и сопутствующие товары. Задача проекта: собрать лендинг с понятной подачей бренда и услуг, который помогает привлекать клиентов.</p>
-                        <p class="lp-text">В основе лендинга чистая типографика и лаконичная структура. Информация о продуктах и услугах собрана без лишних усложнений.</p>
-                    </div>
-                    <div class="lp-meta">
-                        <div class="lp-meta-row">
-                            <span class="lp-meta-label">Тип проекта</span>
-                            <span class="lp-meta-val">Landing Page</span>
-                        </div>
-                        <div class="lp-meta-row">
-                            <span class="lp-meta-label">Платформа</span>
-                            <span class="lp-meta-val">Tilda</span>
-                        </div>
-                        <div class="lp-meta-row">
-                            <span class="lp-meta-label">Роль</span>
-                            <span class="lp-meta-val">UI Designer</span>
-                        </div>
-                        <div class="lp-meta-row">
-                            <span class="lp-meta-label">Год</span>
-                            <span class="lp-meta-val">2025</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="lp-section">
-            <div class="lp-container">
-                <h2 class="lp-section-title">Что использовалось</h2>
-                <div class="lp-tools">
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">🛠</span>
-                        <h3 class="lp-tool-name">Tilda</h3>
-                        <p class="lp-tool-desc">No-code платформа для сборки лендинга и настройки блоков</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">🎨</span>
-                        <h3 class="lp-tool-name">Figma</h3>
-                        <p class="lp-tool-desc">Прототипирование и подготовка UI-макетов перед вёрсткой на платформе</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">📐</span>
-                        <h3 class="lp-tool-name">UI Design</h3>
-                        <p class="lp-tool-desc">Создание визуальной системы: типографика, цвета, сетка и компоненты интерфейса</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">📱</span>
-                        <h3 class="lp-tool-name">Адаптивность</h3>
-                        <p class="lp-tool-desc">Настройка дизайна и вёрстки под разные устройства</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">⚡</span>
-                        <h3 class="lp-tool-name">Конверсионный UX</h3>
-                        <p class="lp-tool-desc">Проектирование пути пользователя и целевых действий</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">🔤</span>
-                        <h3 class="lp-tool-name">Типографика</h3>
-                        <p class="lp-tool-desc">Подбор шрифтовых пар и визуальной иерархии для читаемости и стиля бренда</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="lp-section lp-bg-alt">
-            <div class="lp-container">
-                <h2 class="lp-section-title lp-center">Демонстрация</h2>
-                <p class="lp-text lp-text-center">Интерактивная версия готового лендинга</p>
-                <div class="lp-browser lp-browser--frame">
-                    <div class="lp-browser-chrome">
-                        <div class="lp-browser-dots">
-                            <span class="lp-dot lp-dot-r"></span>
-                            <span class="lp-dot lp-dot-y"></span>
-                            <span class="lp-dot lp-dot-g"></span>
-                        </div>
-                        <div class="lp-browser-addr">kaminkomfort39.ru</div>
-                        <div class="lp-browser-ctrl"></div>
-                    </div>
-                    <div class="lp-browser-screen lp-browser-screen--frame">
-                        <iframe
-                            class="lp-browser-frame"
-                            src="https://kaminkomfort39.ru/"
-                            title="Kaminkomfort: интерактивная демонстрация"
-                            loading="lazy"
-                            referrerpolicy="no-referrer"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="lp-cta">
-            <button class="lp-cta-btn" onclick="closeLivePreview('kaminkomfort')">← Вернуться к проектам</button>
-        </div>
-
-    </div>
-</div>
 
 <!-- ========== LIVE PREVIEW: СтройМастер ========== -->
 <div id="lp-stroimaster" class="lp-overlay" role="dialog" aria-modal="true" aria-label="СтройМастер: Live Preview">
@@ -421,7 +251,6 @@
                     <div class="lp-split-main">
                         <h2 class="lp-section-title">О проекте</h2>
                         <p class="lp-text">СтройМастер занимается строительством и ремонтом. Нужно было за сжатые сроки сделать лендинг, который объясняет услуги и ведёт пользователя к заявке.</p>
-                        <p class="lp-text">Структура идёт от УТП к услугам, преимуществам и форме заявки. ИИ-ассистент помог собрать структуру, проверить код и выполнить рутинные задачи. Это освободило время для UX и деталей дизайна.</p>
                     </div>
                     <div class="lp-meta">
                         <div class="lp-meta-row">
@@ -450,39 +279,24 @@
                 <h2 class="lp-section-title">Что использовалось</h2>
                 <div class="lp-tools">
                     <div class="lp-tool">
-                        <span class="lp-tool-icon">🛠</span>
                         <h3 class="lp-tool-name">HTML5 &amp; CSS3</h3>
-                        <p class="lp-tool-desc">Семантическая разметка и CSS для поддерживаемой вёрстки</p>
+                        <p class="lp-tool-desc">Семантическая структура страниц и адаптивная вёрстка</p>
                     </div>
                     <div class="lp-tool">
-                        <span class="lp-tool-icon">⚙️</span>
                         <h3 class="lp-tool-name">JavaScript</h3>
-                        <p class="lp-tool-desc">Плавная прокрутка, анимации при скролле и обработка формы</p>
+                        <p class="lp-tool-desc">Интерактивные элементы, анимации при прокрутке и обработка формы</p>
                     </div>
                     <div class="lp-tool">
-                        <span class="lp-tool-icon">🎨</span>
                         <h3 class="lp-tool-name">Figma</h3>
-                        <p class="lp-tool-desc">Прототипирование и разработка UI-макета до начала вёрстки</p>
+                        <p class="lp-tool-desc">Прототипирование и подготовка макета перед вёрсткой</p>
                     </div>
                     <div class="lp-tool">
-                        <span class="lp-tool-icon">📱</span>
-                        <h3 class="lp-tool-name">Адаптивность</h3>
-                        <p class="lp-tool-desc">Mobile-first подход, CSS Grid и Flexbox для разных устройств</p>
+                        <h3 class="lp-tool-name">Адаптивный дизайн</h3>
+                        <p class="lp-tool-desc">Настройка интерфейса для разных размеров экранов</p>
                     </div>
                     <div class="lp-tool">
-                        <span class="lp-tool-icon">⚡</span>
                         <h3 class="lp-tool-name">Конверсионный UX</h3>
-                        <p class="lp-tool-desc">Путь пользователя от первого экрана до формы заявки</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">📐</span>
-                        <h3 class="lp-tool-name">UI Design</h3>
-                        <p class="lp-tool-desc">Визуальная система: типографика, цветовая схема, сетка и компоненты интерфейса</p>
-                    </div>
-                    <div class="lp-tool">
-                        <span class="lp-tool-icon">🤖</span>
-                        <h3 class="lp-tool-name">ИИ-ассистент</h3>
-                        <p class="lp-tool-desc">ИИ-ассистент ускорил разработку, помогая с генерацией структуры, ревью кода и выбором решений</p>
+                        <p class="lp-tool-desc">Понятный путь от знакомства с услугами до отправки заявки</p>
                     </div>
                 </div>
             </div>
@@ -897,6 +711,216 @@
         <div class="lp-cta">
             <button class="lp-cta-btn" onclick="closeLivePreview('novikstudio')">← Вернуться к проектам</button>
         </div>
+    </div>
+</div>
+
+<!-- ========== LIVE PREVIEW: PLAYER-ONE ========== -->
+<div id="lp-player-one" class="lp-overlay" role="dialog" aria-modal="true" aria-label="PLAYER-ONE: Live Preview">
+    <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('player-one')"><span>←</span><span>Назад</span></button>
+        <span class="lp-nav-brand">PLAYER-ONE</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('player-one')" aria-label="Закрыть">✕</button>
+    </nav>
+    <div class="lp-page">
+        <section class="lp-hero">
+            <div class="lp-hero-content">
+                <div class="lp-tags"><span>Портфолио</span><span>UI Design</span><span>Адаптивный дизайн</span></div>
+                <h2 class="lp-hero-title">PLAYER-ONE</h2>
+                <p class="lp-hero-sub">Портфолио дизайнера с пиксельной графикой</p>
+                <a href="https://minds291.github.io/player-one-portfolio/" target="_blank" rel="noopener noreferrer" class="lp-visit-btn">Посетить сайт →</a>
+            </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+            <div class="lp-container">
+                <div class="lp-split">
+                    <div class="lp-split-main">
+                        <h2 class="lp-section-title">О проекте</h2>
+                        <p class="lp-text">Сайт представляет работы независимого дизайнера. Пиксельная типографика и иллюстрация рабочего места задают узнаваемый стиль уже на первом экране.</p>
+                        <p class="lp-text">После разработки сайт перенесён на WordPress. Через админку можно обновлять информацию о проектах, добавлять и редактировать работы, изображения и тексты, а также управлять страницами и содержимым портфолио без правок кода.</p>
+                    </div>
+                    <div class="lp-meta">
+                        <div class="lp-meta-row"><span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Личное портфолио</span></div>
+                        <div class="lp-meta-row"><span class="lp-meta-label">Визуальный стиль</span><span class="lp-meta-val">Пиксельная графика</span></div>
+                        <div class="lp-meta-row"><span class="lp-meta-label">Размещение</span><span class="lp-meta-val">GitHub Pages</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section">
+            <div class="lp-container">
+                <h2 class="lp-section-title">Что использовалось</h2>
+                <div class="lp-tools">
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🧱</span>
+                        <h3 class="lp-tool-name">HTML</h3>
+                        <p class="lp-tool-desc">Структура страниц, каталога и карточек работ</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🎨</span>
+                        <h3 class="lp-tool-name">CSS</h3>
+                        <p class="lp-tool-desc">Стилизация интерфейса и адаптивная сетка для разных экранов</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">⚙️</span>
+                        <h3 class="lp-tool-name">JS</h3>
+                        <p class="lp-tool-desc">Интерактивные элементы и поведение интерфейса</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🌐</span>
+                        <h3 class="lp-tool-name">WordPress</h3>
+                        <p class="lp-tool-desc">Перенос сайта и управление страницами, работами и контентом через админку</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section">
+            <div class="lp-container">
+                <h2 class="lp-section-title">Управление сайтом</h2>
+                <p class="lp-text">Панель WordPress для редактирования сайта и публикации новых работ.</p>
+                <div class="lp-admin-gallery">
+                    <figure>
+                        <a href="assets/img/player-one_wp-admin.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот панели WordPress PLAYER-ONE в полном размере">
+                            <img src="assets/img/player-one_wp-admin.jpg" alt="Панель управления WordPress для PLAYER-ONE" loading="lazy">
+                        </a>
+                        <figcaption>Панель WordPress</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="assets/img/player-one_wp-admin-works.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот управления работами PLAYER-ONE в полном размере">
+                            <img src="assets/img/player-one_wp-admin-works.jpg" alt="Список работ в панели управления PLAYER-ONE" loading="lazy">
+                        </a>
+                        <figcaption>Управление работами портфолио</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="assets/img/player-one_wp-site-editor-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот редактора сайта PLAYER-ONE в полном размере">
+                            <img src="assets/img/player-one_wp-site-editor-demo.jpg" alt="Редактор сайта PLAYER-ONE в WordPress" loading="lazy">
+                        </a>
+                        <figcaption>Редактор сайта WordPress</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+            <div class="lp-container">
+                <h2 class="lp-section-title lp-center">Демонстрация</h2>
+                <p class="lp-text lp-text-center">Живая версия сайта</p>
+                <div class="lp-browser lp-browser--frame">
+                    <div class="lp-browser-chrome">
+                        <div class="lp-browser-dots"><span class="lp-dot lp-dot-r"></span><span class="lp-dot lp-dot-y"></span><span class="lp-dot lp-dot-g"></span></div>
+                        <div class="lp-browser-addr">minds291.github.io/player-one-portfolio/</div>
+                        <div class="lp-browser-ctrl"></div>
+                    </div>
+                    <div class="lp-browser-screen lp-browser-screen--frame">
+                        <iframe class="lp-browser-frame" src="https://minds291.github.io/player-one-portfolio/" title="PLAYER-ONE: интерактивная демонстрация" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="lp-cta"><button class="lp-cta-btn" onclick="closeLivePreview('player-one')">← Вернуться к проектам</button></div>
+    </div>
+</div>
+
+<!-- ========== LIVE PREVIEW: NELUVE ========== -->
+<div id="lp-neluve" class="lp-overlay" role="dialog" aria-modal="true" aria-label="NELUVE: Live Preview">
+    <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('neluve')"><span>←</span><span>Назад</span></button>
+        <span class="lp-nav-brand">NELUVE</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('neluve')" aria-label="Закрыть">✕</button>
+    </nav>
+    <div class="lp-page">
+        <section class="lp-hero">
+            <div class="lp-hero-content">
+                <div class="lp-tags"><span>Интернет-магазин</span><span>UI Design</span><span>Адаптивный дизайн</span></div>
+                <h2 class="lp-hero-title">NELUVE</h2>
+                <p class="lp-hero-sub">Витрина средств для ежедневного ухода</p>
+                <a href="https://minds291.github.io/NELUVE-ecommerce-static/index.html#top" target="_blank" rel="noopener noreferrer" class="lp-visit-btn">Посетить сайт →</a>
+            </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+            <div class="lp-container">
+                <div class="lp-split">
+                    <div class="lp-split-main">
+                        <h2 class="lp-section-title">О проекте</h2>
+                        <p class="lp-text">NELUVE — сайт косметического бренда с каталогом средств для ухода. Первый экран сочетает крупную предметную фотографию, короткий текст и переход к коллекции.</p>
+                        <p class="lp-text">После разработки сайт был перенесён на WordPress с WooCommerce. В панели управления можно редактировать страницы и медиафайлы, добавлять товары, управлять ценами, категориями и наличием.</p>
+                    </div>
+                    <div class="lp-meta">
+                        <div class="lp-meta-row"><span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Интернет-магазин</span></div>
+                        <div class="lp-meta-row"><span class="lp-meta-label">Тематика</span><span class="lp-meta-val">Косметика и уход</span></div>
+                        <div class="lp-meta-row"><span class="lp-meta-label">Размещение</span><span class="lp-meta-val">GitHub Pages</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section">
+            <div class="lp-container">
+                <h2 class="lp-section-title">Что использовалось</h2>
+                <div class="lp-tools">
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🧱</span>
+                        <h3 class="lp-tool-name">HTML</h3>
+                        <p class="lp-tool-desc">Структура страниц магазина, каталога и карточек товаров</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🎨</span>
+                        <h3 class="lp-tool-name">CSS</h3>
+                        <p class="lp-tool-desc">Оформление витрины и адаптивная раскладка каталога на разных экранах</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">⚙️</span>
+                        <h3 class="lp-tool-name">JS</h3>
+                        <p class="lp-tool-desc">Интерактивные элементы каталога и интерфейса магазина</p>
+                    </div>
+                    <div class="lp-tool">
+                        <span class="lp-tool-icon">🌐</span>
+                        <h3 class="lp-tool-name">WordPress</h3>
+                        <p class="lp-tool-desc">Управление страницами и товарами магазина через WordPress и WooCommerce</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section">
+            <div class="lp-container">
+                <h2 class="lp-section-title">Управление сайтом</h2>
+                <p class="lp-text">Панель WordPress, каталог товаров WooCommerce и редактор страниц.</p>
+                <div class="lp-admin-gallery">
+                    <figure>
+                        <a href="assets/img/neluve-wp-admin.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот панели WordPress в полном размере">
+                            <img src="assets/img/neluve-wp-admin.jpg" alt="Главная панель управления WordPress для NELUVE" loading="lazy">
+                        </a>
+                        <figcaption>Панель WordPress</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="assets/img/neluve-wp-admin-products.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот каталога WooCommerce в полном размере">
+                            <img src="assets/img/neluve-wp-admin-products.jpg" alt="Каталог товаров NELUVE в панели WooCommerce" loading="lazy">
+                        </a>
+                        <figcaption>Управление товарами в WooCommerce</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="assets/img/neluve_wp-site-editor-demo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот редактора сайта NELUVE в полном размере">
+                            <img src="assets/img/neluve_wp-site-editor-demo.jpg" alt="Редактирование страницы о бренде NELUVE в WordPress" loading="lazy">
+                        </a>
+                        <figcaption>Редактор страниц WordPress</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+            <div class="lp-container">
+                <h2 class="lp-section-title lp-center">Демонстрация</h2>
+                <p class="lp-text lp-text-center">Живая версия сайта</p>
+                <div class="lp-browser lp-browser--frame">
+                    <div class="lp-browser-chrome">
+                        <div class="lp-browser-dots"><span class="lp-dot lp-dot-r"></span><span class="lp-dot lp-dot-y"></span><span class="lp-dot lp-dot-g"></span></div>
+                        <div class="lp-browser-addr">minds291.github.io/NELUVE-ecommerce-static/</div>
+                        <div class="lp-browser-ctrl"></div>
+                    </div>
+                    <div class="lp-browser-screen lp-browser-screen--frame">
+                        <iframe class="lp-browser-frame" src="https://minds291.github.io/NELUVE-ecommerce-static/index.html#top" title="NELUVE: интерактивная демонстрация" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="lp-cta"><button class="lp-cta-btn" onclick="closeLivePreview('neluve')">← Вернуться к проектам</button></div>
     </div>
 </div>
 
