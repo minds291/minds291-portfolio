@@ -1,503 +1,1187 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="oklch(0.963 0.015 85)" />
-    <meta
-      name="description"
-      content="PLAYER ONE — независимый цифровой дизайнер и креативный разработчик. Авторские концепты сайтов, интерфейсов и визуальных систем."
-    />
-    <title>Дизайн с характером — PLAYER ONE</title>
-    <link
-      rel="preload"
-      href="assets/fonts/tiny5.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      (() => {
-        const root = document.documentElement;
-        try {
-          if (sessionStorage.getItem("player-one-intro-seen") === "1") return;
-        } catch {}
-        root.classList.add("intro-pending");
-        window.playerOneIntroFallback = setTimeout(
-          () => root.classList.remove("intro-pending"),
-          3000,
-        );
-      })();
-    </script>
-    <script src="app.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио - Веб-Разработчик</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
   </head>
-  <body>
-    <dialog
-      class="site-intro"
-      id="site-intro"
-      aria-labelledby="site-intro-title"
-      data-od-id="site-intro"
-    >
-      <button
-        class="sound-toggle"
-        type="button"
-        data-sound-toggle
-        aria-label="Звук сайта"
-        aria-pressed="true"
-        hidden
-        data-od-id="intro-sound-toggle"
-      >
-        <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M2 8h5V6h2V4h4v16H9v-2H7v-2H2z" />
-          <path class="sound-waves" d="M16 7h2v2h2v6h-2v2h-2v-2h2V9h-2z" />
-          <path
-            class="sound-off"
-            d="M16 7h2v2h2V7h2v4h-2v2h2v4h-2v-2h-2v2h-2v-4h2v-2h-2z"
-          /></svg
-        ><span class="sound-label">Звук: Вкл.</span>
-      </button>
-      <div class="site-intro-content">
-        <h2 class="site-intro-title" id="site-intro-title">PLAYER ONE</h2>
-        <p class="site-intro-presents">PORTFOLIO</p>
-        <button
-          class="site-intro-start"
-          type="button"
-          aria-label="Войти на сайт со звуком"
-          autofocus
-          data-od-id="site-intro-start"
-        >
-          <span>PRESS START</span>
-        </button>
-      </div>
-      <button
-        class="site-intro-skip"
-        type="button"
-        data-od-id="site-intro-skip"
-      >
-        Пропустить <span aria-hidden="true">→</span>
-      </button>
-    </dialog>
-    <a class="skip-link" href="#main" data-od-id="skip-to-content"
-      >К содержанию</a
-    >
-    <div class="wrap">
-      <header class="header" data-od-id="site-header">
-        <a
-          class="brand"
-          href="index.html"
-          aria-label="PLAYER ONE — главная"
-          data-od-id="brand-home"
-          ><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
-            <path d="M12 0h6v6h6v6h6v6h-6v6h-6v6h-6v-6H6v-6H0v-6h6V6h6z" /></svg
-          ><span
-            ><span class="brand-name">PLAYER ONE</span
-            ><span class="brand-caption">ДИЗАЙНЕР / РАЗРАБОТЧИК</span></span
-          ></a
-        ><button
-          class="menu-toggle"
-          type="button"
-          aria-label="Открыть меню"
-          aria-expanded="false"
-          aria-controls="mobile-nav-dialog"
-          aria-haspopup="dialog"
-          data-od-id="mobile-menu"
-        >
-          <span class="menu-icon" aria-hidden="true"></span>
-        </button>
-        <nav
-          class="nav"
-          id="main-nav"
-          aria-label="Основная навигация"
-          data-od-id="main-navigation"
-        >
-          <a href="index.html" aria-current="page" data-od-id="nav-index"
-            >Главная</a
-          ><a href="projects.html" data-od-id="nav-projects">Проекты</a
-          ><a href="about.html" data-od-id="nav-about">Обо мне</a
-          ><a href="contact.html" data-od-id="nav-contact">Контакт</a>
-        </nav>
-        <div class="header-tools">
-          <div class="availability" data-od-id="availability">
-            <span class="status-dot" aria-hidden="true"></span>Открыт к новым
-            проектам
-          </div>
+  <body class="dark-theme">
+    <header id="home" class="hero">
+      <nav class="hero-nav">
+        <a href="#home" class="nav-logo">minds291</a>
+        <div class="nav-actions">
+          <ul id="primary-menu" class="nav-menu">
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#about">Обо мне</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+            <span class="icon-moon">🌙</span>
+            <span class="icon-sun">☀️</span>
+          </button>
           <button
-            class="sound-toggle"
+            class="menu-toggle"
             type="button"
-            data-sound-toggle
-            aria-label="Звук сайта"
-            aria-pressed="true"
-            hidden
-            data-od-id="header-sound-toggle"
+            aria-expanded="false"
+            aria-controls="primary-menu"
+            aria-label="Открыть меню"
           >
-            <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M2 8h5V6h2V4h4v16H9v-2H7v-2H2z" />
-              <path class="sound-waves" d="M16 7h2v2h2v6h-2v2h-2v-2h2V9h-2z" />
-              <path
-                class="sound-off"
-                d="M16 7h2v2h2V7h2v4h-2v2h2v4h-2v-2h-2v2h-2v-4h2v-2h-2z"
-              /></svg
-            ><span class="sound-label">Звук: Вкл.</span>
+            <span class="menu-toggle-label">Меню</span>
+            <span class="menu-toggle-icon" aria-hidden="true"></span>
           </button>
         </div>
-      </header>
-    </div>
-    <dialog
-      class="mobile-menu"
-      id="mobile-nav-dialog"
-      aria-labelledby="mobile-nav-title"
-      data-od-id="mobile-nav-panel"
-    >
-      <div class="mobile-menu-top">
-        <div>
-          <p class="mobile-menu-brand">
-            <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
-              <path
-                d="M12 0h6v6h6v6h6v6h-6v6h-6v6h-6v-6H6v-6H0v-6h6V6h6z"
-              /></svg
-            ><span>PLAYER ONE</span>
-          </p>
-          <h2 class="mobile-menu-title" id="mobile-nav-title">Меню</h2>
-        </div>
-        <button
-          class="mobile-menu-close"
-          type="button"
-          aria-label="Закрыть меню"
-          autofocus
-          data-od-id="mobile-nav-close"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M4 4h4v4H4zM16 4h4v4h-4zM8 8h8v8H8zM4 16h4v4H4zM16 16h4v4h-4z"
-            />
-          </svg>
-        </button>
-      </div>
-      <nav
-        class="mobile-menu-nav"
-        aria-label="Основная навигация"
-        data-od-id="mobile-navigation"
-      >
-        <a href="index.html" aria-current="page" data-od-id="mobile-nav-index"
-          ><span class="mobile-menu-number" aria-hidden="true">01</span
-          ><span>Главная</span
-          ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 19 19 5M5 5h14v14" /></svg></a
-        ><a href="projects.html" data-od-id="mobile-nav-projects"
-          ><span class="mobile-menu-number" aria-hidden="true">02</span
-          ><span>Проекты</span
-          ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 19 19 5M5 5h14v14" /></svg></a
-        ><a href="about.html" data-od-id="mobile-nav-about"
-          ><span class="mobile-menu-number" aria-hidden="true">03</span
-          ><span>Обо мне</span
-          ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 19 19 5M5 5h14v14" /></svg></a
-        ><a href="contact.html" data-od-id="mobile-nav-contact"
-          ><span class="mobile-menu-number" aria-hidden="true">04</span
-          ><span>Контакт</span
-          ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 19 19 5M5 5h14v14" /></svg
-        ></a>
       </nav>
-      <div class="mobile-menu-footer">
-        <p class="mobile-menu-status">
-          <span class="status-dot" aria-hidden="true"></span>Открыт к новым
-          проектам
-        </p>
-        <button
-          class="sound-toggle"
-          type="button"
-          data-sound-toggle
-          aria-label="Звук сайта"
-          aria-pressed="true"
-          hidden
-          data-od-id="mobile-sound-toggle"
-        >
-          <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M2 8h5V6h2V4h4v16H9v-2H7v-2H2z" />
-            <path class="sound-waves" d="M16 7h2v2h2v6h-2v2h-2v-2h2V9h-2z" />
-            <path
-              class="sound-off"
-              d="M16 7h2v2h2V7h2v4h-2v2h2v4h-2v-2h-2v2h-2v-4h2v-2h-2z"
-            /></svg
-          ><span class="sound-label">Звук: Вкл.</span>
-        </button>
+      <button class="menu-backdrop" type="button" aria-label="Закрыть меню" aria-hidden="true" tabindex="-1"></button>
+
+      <div class="hero-content">
+        <p class="hero-kicker">Моё Портфолио · 2026</p>
+        <h1 class="hero-title">Дизайн и сайты для бизнес-задач.</h1>
+        <p class="hero-subtitle">Веб-дизайнер / Frontend / No-code специалист</p>
+        <p class="hero-description">Создаю современные сайты для бизнес-задач и привлечения клиентов.</p>
+        <a href="#projects" class="hero-link">Смотреть проекты <span aria-hidden="true">↘</span></a>
       </div>
-    </dialog>
-    <main id="main" tabindex="-1" class="wrap" data-od-id="index-page">
-      <section class="hero" data-od-id="home-hero">
-        <div class="hero-top">
-          <p class="eyebrow">НЕЗАВИСИМЫЙ ДИЗАЙНЕР · PLAYER ONE</p>
-          <span class="section-code">[01 / НАЧАЛО]</span>
-        </div>
-        <div class="hero-grid">
-          <div>
-            <h1 class="hero-title" data-od-id="hero-title">
-              <span>Дизайн</span><span>с характером.</span>
-            </h1>
-            <p class="hero-copy">
-              Создаю сайты, интерфейсы и цифровые штуки, которые хочется
-              рассматривать — и&nbsp;удобно использовать.
-            </p>
-            <div class="hero-actions">
-              <a class="primary" href="projects.html" data-od-id="view-projects"
-                >Смотреть проекты
-                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 19 19 5M5 5h14v14" /></svg></a
-              ><span class="hero-side-note"
-                >ПИКСЕЛИ — В ДЕТАЛЯХ.<br />СМЫСЛ — В ОСНОВЕ.</span
+    </header>
+
+    <!-- ========== Секция "Проекты" ========== -->
+    <section id="projects" class="projects-section">
+      <div class="projects-container">
+        <h2 class="projects-title">Мои проекты</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/kaminkomfort_mobile.png" />
+                <img src="assets/img/stroimaster.jpg" alt="Главный экран сайта СтройМастер" />
+              </picture>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML5 & CSS3</span>
+                <span>UI Design</span>
+                <span>Адаптивный дизайн</span>
+              </div>
+              <h3 class="project-name">Landing Page для СтройМастер</h3>
+              <p class="project-desc">Лендинг для строительной компании с путём от первого экрана до заявки.</p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('stroimaster');
+                "
+                >Смотреть кейс →</a
               >
             </div>
           </div>
-          <figure class="workstation" data-od-id="creative-workstation">
-            <div class="desk-art">
-              <img
-                src="assets/workstation.png"
-                width="320"
-                height="250"
-                alt="Авторский пиксельный рабочий стол: редактор на мониторе, лампа, блокноты, чашка и растение у окна"
-              />
-              <div class="screen-sleep" aria-hidden="true">z z z</div>
+
+          <!-- Проект 3: AXIOM -->
+          <div class="project-card">
+            <div class="project-image">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/axiom_mobile.png" />
+                <img src="assets/img/axiom_screenshot.png" alt="Главный экран сайта AXIOM" />
+              </picture>
             </div>
-            <figcaption class="desk-caption">
-              <span>МОЙ МАЛЕНЬКИЙ ЦИФРОВОЙ МИР</span
-              ><button
-                class="desk-toggle"
-                aria-pressed="false"
-                data-od-id="desk-toggle"
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML5 & CSS3</span>
+                <span>Адаптивный Дизайн</span>
+              </div>
+              <h3 class="project-name">Проект AXIOM</h3>
+              <p class="project-desc">Корпоративный лендинг для B2B-недвижимости.</p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('axiom');
+                "
+                >Смотреть кейс →</a
               >
-                <span class="power-dot" aria-hidden="true"></span
-                ><span class="desk-toggle-label">Пауза на кофе</span>
-              </button>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="hero-bottom">
-          <span
-            ><span class="little-cross" aria-hidden="true">+</span>Веб-дизайн /
-            Интерфейсы / Код</span
-          ><span>Немного ретро. Вполне современно.</span>
-        </div>
-      </section>
-      <section class="section" data-od-id="selected-projects">
-        <div class="section-heading">
-          <div>
-            <div class="section-label">
-              <span class="pixel">02</span>
-              <p class="eyebrow">ИЗБРАННЫЕ ПРОЕКТЫ</p>
             </div>
-            <h2 class="section-title" data-od-id="selected-projects-title">
-              Сделано с мыслью.
-            </h2>
           </div>
-          <a class="link" href="projects.html" data-od-id="all-projects"
-            >Все проекты
-            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 19 19 5M5 5h14v14" /></svg
-          ></a>
+
+          <!-- Проект 4: Запводпроект -->
+          <div class="project-card">
+            <div class="project-image">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/zapvod_mobile.png" />
+                <img src="assets/img/zapvod.png" alt="Главный экран сайта Запводпроект" />
+              </picture>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Корпоративный сайт</span>
+                <span>UI Design</span>
+                <span>Адаптивный дизайн</span>
+              </div>
+              <h3 class="project-name">Сайт «Запводпроект»</h3>
+              <p class="project-desc">
+                Сайт проектно-изыскательского института с направлениями работ, услугами и контактами.
+              </p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('gta6info');
+                "
+                >Смотреть кейс →</a
+              >
+            </div>
+          </div>
+
+          <!-- Проект 5: NOVIK -->
+          <div class="project-card">
+            <div class="project-image">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/novik_mobile.png" />
+                <img src="assets/img/novik.jpg" alt="Главный экран интернет-магазина NOVIK" />
+              </picture>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Интернет-магазин</span>
+                <span>UI Design</span>
+                <span>В разработке</span>
+              </div>
+              <h3 class="project-name">Интернет-магазин NOVIK</h3>
+              <p class="project-desc">
+                Магазин кожаных аксессуаров с каталогом Calma Collection и пользовательскими сценариями.
+              </p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('novikstudio');
+                "
+                >Смотреть кейс →</a
+              >
+            </div>
+          </div>
+
+          <!-- Проект 6: PLAYER-ONE -->
+          <div class="project-card">
+            <div class="project-image">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/player-one_mobile.png" />
+                <img src="assets/img/player-one.jpg" alt="Главный экран портфолио PLAYER-ONE" />
+              </picture>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Портфолио</span>
+                <span>UI Design</span>
+                <span>Адаптивный дизайн</span>
+              </div>
+              <h3 class="project-name">Портфолио PLAYER-ONE</h3>
+              <p class="project-desc">Портфолио дизайнера с пиксельной графикой и акцентом на проектах.</p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('player-one');
+                "
+                >Смотреть кейс →</a
+              >
+            </div>
+          </div>
+
+          <!-- Проект 7: NELUVE -->
+          <div class="project-card">
+            <div class="project-image project-image--neluve">
+              <picture>
+                <source media="(max-width: 768px)" srcset="assets/img/neluve_mobile.png" />
+                <img src="assets/img/neluve.jpg" alt="Главный экран магазина косметики NELUVE" />
+              </picture>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Интернет-магазин</span>
+                <span>UI Design</span>
+                <span>Адаптивный дизайн</span>
+              </div>
+              <h3 class="project-name">Интернет-магазин NELUVE</h3>
+              <p class="project-desc">Витрина косметики с каталогом и последующим переносом на WordPress.</p>
+              <a
+                href="#"
+                class="project-link"
+                onclick="
+                  event.preventDefault();
+                  openLivePreview('neluve');
+                "
+                >Смотреть кейс →</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="project-grid">
-          <button
-            class="project-card"
-            data-project="field"
-            data-od-id="home-project-field"
-            aria-label="Открыть концепт «Поле»"
-          >
-            <div class="project-art art-field" data-od-id="home-field-visual">
-              <div class="art-top">
-                <span>НЕЗАВИСИМЫЙ ЖУРНАЛ</span><span>ВЫПУСК 01</span>
-              </div>
-              <div class="field-name">ПОЛЕ</div>
-              <div class="field-tagline">
-                Город начинается<br />с&nbsp;любопытства.
-              </div>
-              <img
-                class="field-img"
-                src="assets/field.png"
-                width="224"
-                height="128"
-                alt="Пиксельный зелёный пейзаж с тропинкой"
-              />
-            </div>
-            <div class="card-meta">
-              <div>
-                <h3 class="card-name" data-od-id="home-field-title">
-                  <span class="card-number">01</span>Поле
-                </h3>
-                <p class="card-category">Веб-дизайн · Концепт</p>
-              </div>
-              <span class="card-arrow" aria-hidden="true"
-                ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 19 19 5M5 5h14v14" /></svg
-              ></span>
-            </div></button
-          ><button
-            class="project-card"
-            data-project="rhythm"
-            data-od-id="home-project-rhythm"
-            aria-label="Открыть концепт «Ритм»"
-          >
-            <div class="project-art art-rhythm" data-od-id="home-rhythm-visual">
-              <div class="rhythm-head">
-                <span class="rhythm-name">ритм.</span
-                ><span class="rhythm-mode">МОЯ ВОЛНА</span>
-              </div>
-              <img
-                class="record"
-                src="assets/rhythm.png"
-                width="160"
-                height="160"
-                alt="Авторская пиксельная обложка с киноварной пластинкой"
-              />
-              <div class="track-name">Всё в своём ритме</div>
-              <div class="track-sub">Эскиз музыкального интерфейса</div>
-              <div class="player-line" aria-hidden="true">
-                <span class="pause">Ⅱ</span
-                ><span class="waveform"
-                  ><i style="--h: 8px"></i><i style="--h: 17px"></i
-                  ><i style="--h: 27px"></i><i style="--h: 12px"></i
-                  ><i style="--h: 23px"></i><i style="--h: 32px"></i
-                  ><i style="--h: 18px"></i><i style="--h: 10px"></i
-                  ><i style="--h: 28px"></i><i style="--h: 20px"></i
-                  ><i style="--h: 14px"></i><i style="--h: 30px"></i
-                  ><i style="--h: 24px"></i><i style="--h: 12px"></i
-                  ><i style="--h: 18px"></i><i style="--h: 26px"></i
-                  ><i style="--h: 32px"></i><i style="--h: 20px"></i
-                  ><i style="--h: 10px"></i><i style="--h: 24px"></i
-                  ><i style="--h: 17px"></i><i style="--h: 29px"></i
-                  ><i style="--h: 13px"></i><i style="--h: 22px"></i
-                  ><i style="--h: 9px"></i></span
-                ><span class="player-time">02:14</span>
-              </div>
-            </div>
-            <div class="card-meta">
-              <div>
-                <h3 class="card-name" data-od-id="home-rhythm-title">
-                  <span class="card-number">02</span>Ритм
-                </h3>
-                <p class="card-category">Интерфейсы · Концепт</p>
-              </div>
-              <span class="card-arrow" aria-hidden="true"
-                ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 19 19 5M5 5h14v14" /></svg
-              ></span>
-            </div></button
-          ><button
-            class="project-card"
-            data-project="places"
-            data-od-id="home-project-places"
-            aria-label="Открыть концепт «Точка»"
-          >
-            <div class="project-art art-places" data-od-id="home-places-visual">
-              <div class="places-head">
-                <span class="places-name">ТОЧКА</span
-                ><span class="places-index">↗</span>
-              </div>
-              <div class="map-caption">
-                Маленькие места.<br />Большие открытия.
-              </div>
-              <img
-                class="places-map"
-                src="assets/places.png"
-                width="240"
-                height="160"
-                alt="Условная пиксельная карта с маршрутом между двумя точками"
-              />
-              <div class="places-footer">
-                <span>СВОЙ МАРШРУТ</span><span>БЕЗ СПЕШКИ</span>
-              </div>
-            </div>
-            <div class="card-meta">
-              <div>
-                <h3 class="card-name" data-od-id="home-places-title">
-                  <span class="card-number">03</span>Точка
-                </h3>
-                <p class="card-category">Айдентика · Концепт</p>
-              </div>
-              <span class="card-arrow" aria-hidden="true"
-                ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 19 19 5M5 5h14v14" /></svg
-              ></span>
-            </div>
-          </button>
-        </div>
-        <p class="concept-line">
-          Самостоятельные концепты. Пространство для идей, поиска и
-          экспериментов.
-        </p>
-      </section>
-      <section class="intro" data-od-id="home-introduction">
-        <div>
-          <p class="eyebrow">03 / ЧЕЛОВЕК ЗА ПИКСЕЛЯМИ</p>
-          <h2 class="intro-title" data-od-id="intro-title">
-            Я — PLAYER ONE.<br />Сначала смысл.<br />Потом пиксели.
-          </h2>
-        </div>
-        <div class="intro-copy">
-          <p>
-            Мне близок дизайн, в котором есть и ясная логика, и&nbsp;что-то
-            личное. Без лишнего шума, но&nbsp;со&nbsp;своим голосом.
+      </div>
+    </section>
+
+    <!-- ========== Секция "Обо мне" ========== -->
+    <section id="about" class="about-section">
+      <div class="about-container-simplified">
+        <div class="about-copy">
+          <p class="section-kicker">Подход</p>
+          <h2 class="about-title">Обо мне</h2>
+          <p class="about-text">
+            Я создаю понятные и аккуратные веб-интерфейсы. Для меня хороший дизайн должен хорошо выглядеть и удобно
+            работать.
           </p>
-          <p>
-            Работаю на стыке визуального дизайна и&nbsp;кода: от&nbsp;первого
-            наброска до&nbsp;живого интерфейса.
+          <p class="about-text">
+            Работаю с frontend-разработкой и no-code инструментами. Так я могу быстро собирать адаптивные и
+            производительные сайты под конкретные задачи.
           </p>
-          <a class="link" href="about.html" data-od-id="more-about"
-            >Чуть больше обо мне
-            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 19 19 5M5 5h14v14" /></svg
-          ></a>
         </div>
-      </section>
-      <section class="contact-band" data-od-id="contact-invitation">
-        <div>
-          <p class="eyebrow">СЛЕДУЮЩИЙ ПРОЕКТ МОЖЕТ БЫТЬ ВАШИМ</p>
-          <h2 data-od-id="contact-invitation-title">
-            Есть идея?<br />Дадим ей форму.
-          </h2>
+        <div class="skills-section">
+          <h3 class="skills-title">Основные инструменты и навыки</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">HTML5 & CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Headless CMS</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">UI/UX Принципы</span>
+            <span class="skill-tag">Адаптивный дизайн</span>
+            <span class="skill-tag">No-code</span>
+          </div>
         </div>
-        <div class="contact-band-copy">
-          <p>Расскажите, что задумали.<br />Начнём с простого разговора.</p>
-          <a
-            class="link"
-            href="contact.html"
-            data-od-id="contact-invitation-link"
-            >Обсудить проект
-            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 19 19 5M5 5h14v14" /></svg
-          ></a>
+      </div>
+    </section>
+
+    <!-- ========== Секция "Контакты" (Footer) ========== -->
+    <footer id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="footer-wrapper">
+          <div class="footer-bottom">
+            <p>&copy; 2026 Creative Developer. Все права защищены.</p>
+          </div>
+
+          <div class="footer-logo">
+            <a href="#home">Вернуться назад</a>
+          </div>
         </div>
-      </section>
-    </main>
-    <footer class="footer wrap" data-od-id="site-footer">
-      <span>© 2026 PLAYER ONE</span
-      ><span class="footer-center">СОБРАНО СО СМЫСЛОМ И ПИКСЕЛЯМИ</span
-      ><button class="back-top" data-od-id="back-to-top">
-        Наверх <span aria-hidden="true">↑</span>
-      </button>
+      </div>
     </footer>
-    <dialog
-      class="dialog"
-      id="project-dialog"
-      aria-labelledby="dialog-title"
-      data-od-id="project-detail"
-    >
-      <div class="dialog-top">
-        <span class="eyebrow" id="dialog-label">АВТОРСКИЙ КОНЦЕПТ</span
-        ><button
-          class="dialog-close"
-          aria-label="Закрыть проект"
-          autofocus
-          data-od-id="close-project"
-        >
-          ×
+
+    <!-- ========== LIVE PREVIEW: СтройМастер ========== -->
+    <div id="lp-stroimaster" class="lp-overlay" role="dialog" aria-modal="true" aria-label="СтройМастер: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('stroimaster')">
+          <span>←</span>
+          <span>Назад</span>
         </button>
+        <span class="lp-nav-brand">СтройМастер</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('stroimaster')" aria-label="Закрыть">✕</button>
+      </nav>
+
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags">
+              <span>HTML5 &amp; CSS3</span>
+              <span>JavaScript</span>
+              <span>Landing Page</span>
+            </div>
+            <h2 class="lp-hero-title">СтройМастер</h2>
+            <p class="lp-hero-sub">Лендинг для строительной компании</p>
+            <a
+              href="https://minds291.github.io/stroimaster-landing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+          <div class="lp-hero-shapes">
+            <div class="lp-shape lp-s1"></div>
+            <div class="lp-shape lp-s2"></div>
+            <div class="lp-shape lp-s3"></div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  СтройМастер занимается строительством и ремонтом. Нужно было за сжатые сроки сделать лендинг, который
+                  объясняет услуги и ведёт пользователя к заявке.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Landing Page</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span><span class="lp-meta-val">HTML5, CSS3, JavaScript</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">HTML5 &amp; CSS3</h3>
+                <p class="lp-tool-desc">Семантическая структура страниц и адаптивная вёрстка</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">JavaScript</h3>
+                <p class="lp-tool-desc">Интерактивные элементы, анимации при прокрутке и обработка формы</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Figma</h3>
+                <p class="lp-tool-desc">Прототипирование и подготовка макета перед вёрсткой</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Адаптивный дизайн</h3>
+                <p class="lp-tool-desc">Настройка интерфейса для разных размеров экранов</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Конверсионный UX</h3>
+                <p class="lp-tool-desc">Понятный путь от знакомства с услугами до отправки заявки</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Интерактивная версия готового лендинга</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span>
+                  <span class="lp-dot lp-dot-y"></span>
+                  <span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">stroimaster.ru</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/stroimaster-landing/"
+                  title="СтройМастер: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('stroimaster')">← Вернуться к проектам</button>
+        </div>
       </div>
-      <div class="dialog-content" id="dialog-content"></div>
-    </dialog>
+    </div>
+
+    <!-- ========== LIVE PREVIEW: AXIOM ========== -->
+    <div id="lp-axiom" class="lp-overlay" role="dialog" aria-modal="true" aria-label="AXIOM: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('axiom')">
+          <span>←</span>
+          <span>Назад</span>
+        </button>
+        <span class="lp-nav-brand">AXIOM</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('axiom')" aria-label="Закрыть">✕</button>
+      </nav>
+
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags">
+              <span>HTML5 & CSS3</span>
+              <span>Адаптивный дизайн</span>
+              <span>Landing Page</span>
+            </div>
+            <h2 class="lp-hero-title">AXIOM</h2>
+            <p class="lp-hero-sub">
+              Корпоративный лендинг для коммерческой недвижимости с путём до заявки за три клика. В разработке
+              использовался ИИ.
+            </p>
+            <a
+              href="https://minds291.github.io/axiom-landing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+          <div class="lp-hero-shapes">
+            <div class="lp-shape lp-s1"></div>
+            <div class="lp-shape lp-s2"></div>
+            <div class="lp-shape lp-s3"></div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  AXIOM предлагает бизнесу коммерческую недвижимость. Задача проекта: сделать корпоративный лендинг,
+                  который с первого экрана знакомит с компанией, помогает ориентироваться в каталоге и ведёт B2B-клиента
+                  к заявке.
+                </p>
+                <p class="lp-text">
+                  Пользователь проходит от презентации компании к каталогу объектов и форме заявки. ИИ помог
+                  структурировать контент, ускорить вёрстку сложных блоков и предложил UX-решения для корпоративной
+                  аудитории.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Landing Page</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span><span class="lp-meta-val">HTML5, CSS3, JavaScript</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🛠</span>
+                <h3 class="lp-tool-name">HTML5 & CSS3</h3>
+                <p class="lp-tool-desc">Семантическая разметка и CSS для поддерживаемой вёрстки</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">⚙️</span>
+                <h3 class="lp-tool-name">JavaScript</h3>
+                <p class="lp-tool-desc">Реализация интерактивных элементов интерфейса и работа с формами заявки</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">📱</span>
+                <h3 class="lp-tool-name">Адаптивность</h3>
+                <p class="lp-tool-desc">Корректное отображение сложных блоков и каталога на мобильных устройствах</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🎨</span>
+                <h3 class="lp-tool-name">Figma</h3>
+                <p class="lp-tool-desc">
+                  Прототипирование и разработка UI-макетов перед финальной версткой на платформе
+                </p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">⚡</span>
+                <h3 class="lp-tool-name">Конверсионный UX</h3>
+                <p class="lp-tool-desc">Проектирование пути пользователя к B2B-заявке</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🤖</span>
+                <h3 class="lp-tool-name">ИИ-ассистент</h3>
+                <p class="lp-tool-desc">
+                  ИИ-ассистент помог ускорить разработку, структурировать контент и провести ревью решений
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Интерактивная версия готового проекта</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span>
+                  <span class="lp-dot lp-dot-y"></span>
+                  <span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">axiom.ru</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/axiom-landing/"
+                  title="AXIOM: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('axiom')">← Вернуться к проектам</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== LIVE PREVIEW: Запводпроект ========== -->
+    <div id="lp-gta6info" class="lp-overlay" role="dialog" aria-modal="true" aria-label="Запводпроект: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('gta6info')">
+          <span>←</span>
+          <span>Назад</span>
+        </button>
+        <span class="lp-nav-brand">Запводпроект</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('gta6info')" aria-label="Закрыть">✕</button>
+      </nav>
+
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags">
+              <span>Корпоративный сайт</span>
+              <span>UI Design</span>
+              <span>Адаптивный дизайн</span>
+            </div>
+            <h2 class="lp-hero-title">Запводпроект</h2>
+            <p class="lp-hero-sub">Инженерные изыскания и проектирование в Калининграде</p>
+            <a href="https://gta6info.online/" target="_blank" rel="noopener noreferrer" class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  «Запводпроект» рассказывает об инженерных изысканиях и проектных работах. На главной странице собраны
+                  основные направления института, услуги и путь к заказу проекта.
+                </p>
+                <p class="lp-text">
+                  Навигация построена вокруг направлений работы. Пользователь может быстро перейти к нужной услуге,
+                  узнать о возможностях института и связаться с командой.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Корпоративный сайт</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span
+                  ><span class="lp-meta-val">Astro, Directus, Docker, Caddy, Nginx</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Astro</h3>
+                <p class="lp-tool-desc">Фреймворк для разработки интерфейса и страниц проекта.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Directus</h3>
+                <p class="lp-tool-desc">Система управления контентом и данными проекта.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Docker</h3>
+                <p class="lp-tool-desc">Контейнеризация окружения проекта.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Caddy</h3>
+                <p class="lp-tool-desc">Веб-сервер и проксирование приложения.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Nginx</h3>
+                <p class="lp-tool-desc">Веб-сервер и проксирование запросов.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Админ-панель Directus</h2>
+            <p class="lp-text">Управление разделами сайта и редактирование контента через Directus.</p>
+            <div class="lp-admin-gallery">
+              <figure>
+                <a href="assets/img/zapvod_directus-admin-section-demo.jpg" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/img/zapvod_directus-admin-section-demo.jpg"
+                    alt="Разделы сайта «Запводпроект» в админ-панели Directus"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Разделы и материалы сайта</figcaption>
+              </figure>
+              <figure>
+                <a href="assets/img/zapvod_directus-editor-demo.jpg" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/img/zapvod_directus-editor-demo.jpg"
+                    alt="Редактор контента сайта «Запводпроект» в Directus"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Редактор контента</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Живая версия сайта</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span>
+                  <span class="lp-dot lp-dot-y"></span>
+                  <span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">gta6info.online</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/zapvodproject-static/"
+                  title="Запводпроект: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('gta6info')">← Вернуться к проектам</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== LIVE PREVIEW: NOVIK ========== -->
+    <div id="lp-novikstudio" class="lp-overlay" role="dialog" aria-modal="true" aria-label="NOVIK: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('novikstudio')">
+          <span>←</span>
+          <span>Назад</span>
+        </button>
+        <span class="lp-nav-brand">NOVIK</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('novikstudio')" aria-label="Закрыть">✕</button>
+      </nav>
+
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags">
+              <span>Интернет-магазин</span>
+              <span>UI Design</span>
+              <span>В активной разработке</span>
+            </div>
+            <h2 class="lp-hero-title">NOVIK<br />Calma Collection</h2>
+            <p class="lp-hero-sub">Интернет-магазин кожаных аксессуаров с каталогом и базовыми сценариями покупки</p>
+            <a href="https://novikstudio.ru/" target="_blank" rel="noopener noreferrer" class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  NOVIK предлагает кожаные аксессуары в интернет-магазине с каталогом коллекции Calma. Визуальная часть
+                  строится на крупных фотографиях, спокойной типографике и коротком пути к товару.
+                </p>
+                <p class="lp-text">
+                  Проект находится в активной разработке. Уже доступно базовое добавление товаров в избранное и корзину,
+                  а также переход к checkout.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Интернет-магазин</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span><span class="lp-meta-val">Astro, Directus, Docker, Caddy</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что уже работает</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Каталог</h3>
+                <p class="lp-tool-desc">Товары собраны в единой витрине с акцентом на фотографии и детали.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Избранное</h3>
+                <p class="lp-tool-desc">Пользователь может добавить понравившиеся товары в избранное.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Корзина</h3>
+                <p class="lp-tool-desc">Выбранные товары можно собрать в корзине перед оформлением заказа.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Checkout</h3>
+                <p class="lp-tool-desc">Из корзины доступен переход к базовому сценарию оформления.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Адаптивность</h3>
+                <p class="lp-tool-desc">Каталог и основные элементы магазина собраны с учётом мобильного экрана.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Astro</h3>
+                <p class="lp-tool-desc">Фреймворк для разработки интерфейса и страниц магазина.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Directus</h3>
+                <p class="lp-tool-desc">Система управления контентом и данными каталога.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Docker</h3>
+                <p class="lp-tool-desc">Контейнеризация окружения проекта.</p>
+              </div>
+              <div class="lp-tool">
+                <h3 class="lp-tool-name">Caddy</h3>
+                <p class="lp-tool-desc">Веб-сервер и проксирование приложения.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Админ-панель Directus</h2>
+            <p class="lp-text">Управление каталогом NOVIK и редактирование карточек товаров через Directus.</p>
+            <div class="lp-admin-gallery">
+              <figure>
+                <a href="assets/img/novik_directus-admin-panel-demo.jpg" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/img/novik_directus-admin-panel-demo.jpg"
+                    alt="Каталог товаров NOVIK в админ-панели Directus"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Каталог товаров</figcaption>
+              </figure>
+              <figure>
+                <a href="assets/img/novik_directus-product-editor-demo.jpg" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/img/novik_directus-product-editor-demo.jpg"
+                    alt="Редактор товара NOVIK в Directus"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Редактор товара</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Живая версия сайта</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span>
+                  <span class="lp-dot lp-dot-y"></span>
+                  <span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">novikstudio.ru</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/novik-craft-static/"
+                  title="NOVIK: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('novikstudio')">← Вернуться к проектам</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== LIVE PREVIEW: PLAYER-ONE ========== -->
+    <div id="lp-player-one" class="lp-overlay" role="dialog" aria-modal="true" aria-label="PLAYER-ONE: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('player-one')"><span>←</span><span>Назад</span></button>
+        <span class="lp-nav-brand">PLAYER-ONE</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('player-one')" aria-label="Закрыть">✕</button>
+      </nav>
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags"><span>Портфолио</span><span>UI Design</span><span>Адаптивный дизайн</span></div>
+            <h2 class="lp-hero-title">PLAYER-ONE</h2>
+            <p class="lp-hero-sub">Портфолио дизайнера с пиксельной графикой</p>
+            <a
+              href="https://minds291.github.io/player-one-portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  Сайт представляет работы независимого дизайнера. Пиксельная типографика и иллюстрация рабочего места
+                  задают узнаваемый стиль уже на первом экране.
+                </p>
+                <p class="lp-text">
+                  После разработки сайт перенесён на WordPress. Через админку можно обновлять информацию о проектах,
+                  добавлять и редактировать работы, изображения и тексты, а также управлять страницами и содержимым
+                  портфолио без правок кода.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Портфолио</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span
+                  ><span class="lp-meta-val">HTML, CSS, JavaScript, WordPress</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🧱</span>
+                <h3 class="lp-tool-name">HTML</h3>
+                <p class="lp-tool-desc">Структура страниц, каталога и карточек работ</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🎨</span>
+                <h3 class="lp-tool-name">CSS</h3>
+                <p class="lp-tool-desc">Стилизация интерфейса и адаптивная сетка для разных экранов</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">⚙️</span>
+                <h3 class="lp-tool-name">JS</h3>
+                <p class="lp-tool-desc">Интерактивные элементы и поведение интерфейса</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🌐</span>
+                <h3 class="lp-tool-name">WordPress</h3>
+                <p class="lp-tool-desc">Перенос сайта и управление страницами, работами и контентом через админку</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Управление сайтом</h2>
+            <p class="lp-text">Панель WordPress для редактирования сайта и публикации новых работ.</p>
+            <div class="lp-admin-gallery">
+              <figure>
+                <a
+                  href="assets/img/player-one_wp-admin.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот панели WordPress PLAYER-ONE в полном размере"
+                >
+                  <img
+                    src="assets/img/player-one_wp-admin.jpg"
+                    alt="Панель управления WordPress для PLAYER-ONE"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Панель WordPress</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="assets/img/player-one_wp-admin-works.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот управления работами PLAYER-ONE в полном размере"
+                >
+                  <img
+                    src="assets/img/player-one_wp-admin-works.jpg"
+                    alt="Список работ в панели управления PLAYER-ONE"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Управление работами портфолио</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="assets/img/player-one_wp-site-editor-demo.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот редактора сайта PLAYER-ONE в полном размере"
+                >
+                  <img
+                    src="assets/img/player-one_wp-site-editor-demo.jpg"
+                    alt="Редактор сайта PLAYER-ONE в WordPress"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Редактор сайта WordPress</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Живая версия сайта</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span><span class="lp-dot lp-dot-y"></span
+                  ><span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">minds291.github.io/player-one-portfolio/</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/player-one-portfolio/"
+                  title="PLAYER-ONE: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('player-one')">← Вернуться к проектам</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== LIVE PREVIEW: NELUVE ========== -->
+    <div id="lp-neluve" class="lp-overlay" role="dialog" aria-modal="true" aria-label="NELUVE: Live Preview">
+      <nav class="lp-nav">
+        <button class="lp-back-btn" onclick="closeLivePreview('neluve')"><span>←</span><span>Назад</span></button>
+        <span class="lp-nav-brand">NELUVE</span>
+        <button class="lp-close-btn" onclick="closeLivePreview('neluve')" aria-label="Закрыть">✕</button>
+      </nav>
+      <div class="lp-page">
+        <section class="lp-hero">
+          <div class="lp-hero-content">
+            <div class="lp-tags"><span>Интернет-магазин</span><span>UI Design</span><span>Адаптивный дизайн</span></div>
+            <h2 class="lp-hero-title">NELUVE</h2>
+            <p class="lp-hero-sub">Витрина средств для ежедневного ухода</p>
+            <a
+              href="https://minds291.github.io/NELUVE-ecommerce-static/index.html#top"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="lp-visit-btn"
+              >Посетить сайт →</a
+            >
+          </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <div class="lp-split">
+              <div class="lp-split-main">
+                <h2 class="lp-section-title">О проекте</h2>
+                <p class="lp-text">
+                  NELUVE — сайт косметического бренда с каталогом средств для ухода. Первый экран сочетает крупную
+                  предметную фотографию, короткий текст и переход к коллекции.
+                </p>
+                <p class="lp-text">
+                  После разработки сайт был перенесён на WordPress с WooCommerce. В панели управления можно
+                  редактировать страницы и медиафайлы, добавлять товары, управлять ценами, категориями и наличием.
+                </p>
+              </div>
+              <div class="lp-meta">
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Тип проекта</span><span class="lp-meta-val">Интернет-магазин</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Стек</span
+                  ><span class="lp-meta-val">HTML, CSS, JavaScript, WordPress, WooCommerce</span>
+                </div>
+                <div class="lp-meta-row">
+                  <span class="lp-meta-label">Год создания</span><span class="lp-meta-val">2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Что использовалось</h2>
+            <div class="lp-tools">
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🧱</span>
+                <h3 class="lp-tool-name">HTML</h3>
+                <p class="lp-tool-desc">Структура страниц магазина, каталога и карточек товаров</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🎨</span>
+                <h3 class="lp-tool-name">CSS</h3>
+                <p class="lp-tool-desc">Оформление витрины и адаптивная раскладка каталога на разных экранах</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">⚙️</span>
+                <h3 class="lp-tool-name">JS</h3>
+                <p class="lp-tool-desc">Интерактивные элементы каталога и интерфейса магазина</p>
+              </div>
+              <div class="lp-tool">
+                <span class="lp-tool-icon">🌐</span>
+                <h3 class="lp-tool-name">WordPress</h3>
+                <p class="lp-tool-desc">Управление страницами и товарами магазина через WordPress и WooCommerce</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section">
+          <div class="lp-container">
+            <h2 class="lp-section-title">Управление сайтом</h2>
+            <p class="lp-text">Панель WordPress, каталог товаров WooCommerce и редактор страниц.</p>
+            <div class="lp-admin-gallery">
+              <figure>
+                <a
+                  href="assets/img/neluve-wp-admin.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот панели WordPress в полном размере"
+                >
+                  <img
+                    src="assets/img/neluve-wp-admin.jpg"
+                    alt="Главная панель управления WordPress для NELUVE"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Панель WordPress</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="assets/img/neluve-wp-admin-products.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот каталога WooCommerce в полном размере"
+                >
+                  <img
+                    src="assets/img/neluve-wp-admin-products.jpg"
+                    alt="Каталог товаров NELUVE в панели WooCommerce"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Управление товарами в WooCommerce</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="assets/img/neluve_wp-site-editor-demo.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Открыть скриншот редактора сайта NELUVE в полном размере"
+                >
+                  <img
+                    src="assets/img/neluve_wp-site-editor-demo.jpg"
+                    alt="Редактирование страницы о бренде NELUVE в WordPress"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Редактор страниц WordPress</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section class="lp-section lp-bg-alt">
+          <div class="lp-container">
+            <h2 class="lp-section-title lp-center">Демонстрация</h2>
+            <p class="lp-text lp-text-center">Живая версия сайта</p>
+            <div class="lp-browser lp-browser--frame">
+              <div class="lp-browser-chrome">
+                <div class="lp-browser-dots">
+                  <span class="lp-dot lp-dot-r"></span><span class="lp-dot lp-dot-y"></span
+                  ><span class="lp-dot lp-dot-g"></span>
+                </div>
+                <div class="lp-browser-addr">neluve.ru</div>
+                <div class="lp-browser-ctrl"></div>
+              </div>
+              <div class="lp-browser-screen lp-browser-screen--frame">
+                <iframe
+                  class="lp-browser-frame"
+                  src="https://minds291.github.io/NELUVE-ecommerce-static/index.html#top"
+                  title="NELUVE: интерактивная демонстрация"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="lp-cta">
+          <button class="lp-cta-btn" onclick="closeLivePreview('neluve')">← Вернуться к проектам</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
